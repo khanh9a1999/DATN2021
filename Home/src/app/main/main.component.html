@@ -1,0 +1,554 @@
+<main>
+    <!-- breaking start -->
+    <section class="breaking pt-25 pb-25">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="breaking__meta mb-30">
+                        <p>Hôm nay, {{today | date:'dd/MM/yyyy'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breaking end -->
+    <!-- hero-area start -->
+
+    <!-- news area -->
+    <section class="news-area pt-30 pb-30">
+        <!-- trendy news -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title mb-30">
+                        <h2>Tin tức mới</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-10">
+                <div class="col-20" style="border-top: 2px solid #06c">
+                    <p style="font-weight : bold; font-size :17px; color :#06c; padding-top: 10px;">KINH DOANH</p>
+                    <ng-container *ngFor = "let bt2 of bt_new2">
+                    
+                    <div class="postbox mb-25">
+                        <div class="postbox__thumb">
+                            <a [routerLink] = "['/main/detail',bt2.idbantin]" >
+                                <img style="width:228px; height:152px" src="assets/images/{{bt2.anh}}" alt="hero image">
+                            </a>
+                        </div>
+                        <div class="postbox__text pt-10">
+                            <div class="postbox__text-meta pb-10">
+                                <ul>
+                                    
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>{{bt2.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-comment"></i>
+                                        <!-- <span>(03)</span> -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="pr-0">
+                                <a [routerLink] = "['/main/detail',bt2.idbantin]">{{bt2.tieude}}</a>
+                            </h4>
+                        </div>
+                    </div>
+                </ng-container>
+                </div>
+                <div class="col-40" style="border-top: 2px solid #06c">
+
+                    <p style="font-weight : bold; font-size :17px; color :#06c; padding-top: 10px;">THẾ GIỚI</p>
+
+                    <ng-container *ngFor = "let bt1 of bt_new1">
+                    
+                    <div class="postbox mb-25">
+                        <div class="postbox__thumb">
+                            <a [routerLink] = "['/main/detail',bt1.idbantin]">
+                                <img style = "width: 476px; height: 273px" src="assets/images/{{bt1.anh}}" alt="hero image">
+                            </a>
+                            <span class="post-cat post-absolute">
+                                
+                            </span>
+                        </div>
+                        <div class="postbox__text pt-10">
+                            <div class="postbox__text-meta pb-10">
+                                <ul>
+                                    
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>{{bt1.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-comment"></i>
+                                        <!-- <span>(03)</span> -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="title-16 pr-0">
+                                <a [routerLink] = "['/main/detail',bt1.idbantin]">{{bt1.tieude}}</a>
+                            </h4>
+                        </div>
+                    </div>
+                </ng-container>
+                </div>
+                <div class="col-20 d-md-none d-xl-block" style="border-top: 2px solid #06c">
+                    <p style="font-weight : bold; font-size :17px; color :#06c; padding-top: 10px;">GIẢI TRÍ</p>
+                    <ng-container *ngFor = "let bt3 of bt_new3">
+                    
+                    <div class="post__small mb-30">
+                        <div class="post__small-thumb f-left">
+                            <a [routerLink] = "['/main/detail',bt3.idbantin]">
+                                <img style = "width:120px ; height: 85px" src="assets/images/{{bt3.anh}}" alt="hero image">
+                            </a>
+                        </div>
+                        <div class="post__small-text fix pl-10">
+                            <h4 class="title-13 pr-0">
+                                <a [routerLink] = "['/main/detail',bt3.idbantin]">{{bt3.tieude}}</a>
+                            </h4>
+                            <div class="post__small-text-meta">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>{{bt3.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                </div>
+                <div class="col-20 " style="border-top: 2px solid #06c">
+                    <p style="font-weight : bold; font-size :17px; color :#06c; padding-top: 10px;">XE</p>
+                    <ng-container *ngFor = "let bt4 of bt_new4">
+                    
+                    <div class="postbox mb-25">
+                        <div class="postbox__thumb">
+                            <a [routerLink] = "['/main/detail',bt4.idbantin]">
+                                <img style = "width: 228px ; height: 152px" src="assets/images/{{bt4.anh}}" alt="hero image">
+                            </a>
+                        </div>
+                        <div class="postbox__text pt-10">
+                            <div class="postbox__text-meta pb-10">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>{{bt4.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-comment"></i>
+                                        <!-- <span>(03)</span> -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="pr-0">
+                                <a [routerLink] = "['/main/detail',bt4.idbantin]">{{bt4.tieude}}</a>
+                            </h4>
+                        </div>
+                    </div>
+                </ng-container>
+                </div>
+            </div>
+        </div>
+        <!-- trendy news end -->
+    </section>
+    <!-- news area end -->
+
+    <!-- video news -->
+    <section class="cat-area pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title mb-30">
+                        <h2>Sức khỏe</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor = "let bt5 of bt_new5">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="postbox mb-25">
+                        <div class="postbox__thumb" data-overlay="dark" data-opacity="2">
+                            <a [routerLink] = "['/main/detail',bt5.idbantin]">
+                                <img style="width:595px; height:400px" src="assets/images/{{bt5.anh}}" alt="hero image">
+                            </a>
+                        </div>
+                        <div class="postbox__text pt-20">
+                            <h4 class="title-22 pr-0">
+                                <a [routerLink] = "['/main/detail',bt5.idbantin]">{{bt5.tieude}}</a>
+                            </h4>
+                            <div class="postbox__text-meta pb-10">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>{{bt5.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-comment"></i>
+                                        <span>(03)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            </div>
+        </div>
+    </section>
+    <!-- video news end -->
+
+    <!-- cat news -->
+    <section class="cat-area pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="section-title mb-30">
+                        <h2>Đời sống</h2>
+                    </div>
+                    
+                    <div class="cat-sm-post">    
+                        <ng-container *ngFor = "let btds of bt_newds">        
+                        <div class="post__small mb-30">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',btds.idbantin]">
+                                    <img style = "width:217px ; height: 152px" src="assets/images/{{btds.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',btds.idbantin]">{{btds.tieude}}</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{btds.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>  
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="section-title mb-30">
+                        <h2>Du lịch</h2>
+                    </div>
+
+                    <div class="cat-sm-post">
+                        <ng-container *ngFor = "let btdl of bt_newdl">
+                        <div class="post__small mb-30">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',btdl.idbantin]">
+                                    <img style = "width:217px ; height: 152px" src="assets/images/{{btdl.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',btdl.idbantin]">{{btdl.tieude}}.</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{btdl.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 d-md-none d-lg-block">
+                    <div class="section-title mb-30">
+                        <h2>Thể thao</h2>
+                    </div>
+
+                    <div class="cat-sm-post">
+                        <ng-container *ngFor = "let bttt of bt_newtt">
+                        <div class="post__small mb-30">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',bttt.idbantin]">
+                                    <img style = "width:217px ; height: 152px" src="assets/images/{{bttt.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',bttt.idbantin]">{{bttt.tieude}}</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{bttt.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cat news end -->
+
+    <!-- add-area start -->
+    <section class="add-area pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-8 col-md-6">
+                    <div class="section-title mb-30">
+                        <h2>Pháp luật</h2>
+                    </div>
+                    <div class="cat-sm-post mb-30">
+                        <ng-container *ngFor = "let btpl of bt_newpl">
+                        
+                        <div class="post__small mb-25">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',btpl.idbantin]">
+                                    <img style = "width:386px ; height: 241px"src="assets/images/{{btpl.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',btpl.idbantin]">{{btpl.tieude}}</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{btpl.ngaydang}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-8 col-md-6">
+                    <div class="section-title mb-30">
+                        <h2>Việc làm</h2>
+                    </div>
+                    <div class="cat-sm-post mb-30">
+                        <ng-container *ngFor = "let btvl of bt_newvl">
+                        
+                        <div class="post__small mb-25">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',btvl.idbantin]">
+                                    <img style = "width:386px ; height: 241px" src="assets/images/{{btvl.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',btvl.idbantin]">{{btvl.tieude}}</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{btvl.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-8 col-md-6">
+                    <div class="section-title mb-30">
+                        <h2>Giáo dục</h2>
+                    </div>
+                    <div class="cat-sm-post mb-30">
+                        <ng-container *ngFor = "let btgd of bt_newgd">
+                        
+                        <div class="post__small mb-25">
+                            <div class="post__small-thumb f-left">
+                                <a [routerLink] = "['/main/detail',btgd.idbantin]">
+                                    <img style = "width:386px ; height: 241px" src="assets/images/{{btgd.anh}}" alt="hero image">
+                                </a>
+                            </div>
+                            <div class="post__small-text fix pl-10">
+                                <h4 class="title-16 pr-0 mt-0">
+                                    <a [routerLink] = "['/main/detail',btgd.idbantin]">{{btgd.tieude}}</a>
+                                </h4>
+                                <div class="post__small-text-meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>{{btgd.ngaydang | date:'dd/MM/yyyy'}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- add-area end -->
+
+    <!-- latest news -->
+    <section class="latest-area pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title mb-30">
+                        <h2>latest news</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-7 col-lg-12">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-4 col-md-6">
+                            <div class="postbox mb-30">
+                                <div class="postbox__thumb">
+                                    <a href="#">
+                                        <img src="assets/img/latest/latest-1.jpg" alt="hero image">
+                                    </a>
+                                    <span class="post-cat post-absolute">
+                                        <a href="#">politic</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-6">
+                            <div class="postbox__text mb-30">
+                                <h4 class="title-16 pr-0">
+                                    <a href="#">Succession finale: jeremy strong keall’s struggles what comes next.</a>
+                                </h4>
+                                <div class="postbox__text-meta pb-10">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>01 Sep 2018</span>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comment"></i>
+                                            <span>(03)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="desc-text mb-20">
+                                    <p>But I must explain to you how all this mistaken idea of denouncing sure and praising pain was born
+                                        and I will give you a complete account.</p>
+                                </div>
+                                <a href="#" class="btn btn-soft">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-4 col-md-6">
+                            <div class="postbox mb-30">
+                                <div class="postbox__thumb">
+                                    <a href="#">
+                                        <img src="assets/img/latest/latest-2.jpg" alt="hero image">
+                                    </a>
+                                    <span class="post-cat post-absolute">
+                                        <a href="#">politic</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-6">
+                            <div class="postbox__text mb-30">
+                                <h4 class="title-16 pr-0">
+                                    <a href="#">Critic’s notebook: deep dives into jutice from shakespeare and atticus finch</a>
+                                </h4>
+                                <div class="postbox__text-meta pb-10">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>01 Sep 2018</span>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-comment"></i>
+                                            <span>(03)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="desc-text mb-20">
+                                    <p>But I must explain to you how all this mistaken idea of denouncing sure and praising pain was born
+                                        and I will give you a complete account.</p>
+                                </div>
+                                <a href="#" class="btn btn-soft">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="postbox mb-30">
+                        <div class="postbox__thumb">
+                            <a href="#">
+                                <img class="img-100" src="assets/img/latest/latest-lg.jpg" alt="hero image">
+                            </a>
+                            <span class="post-cat post-absolute">
+                                <a href="#">politic</a>
+                            </span>
+                        </div>
+                        <div class="postbox__text pt-25">
+                            <h4 class="title-16 pr-0">
+                                <a href="#">Trump administration officials, have used veto power over other companies, forcing them to buy their
+                                    products instead of .
+                                </a>
+                            </h4>
+                            <div class="postbox__text-meta pb-10">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>01 Sep 2018</span>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-comment"></i>
+                                        <span>(03)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="desc-text mb-20">
+                                <p>But I must explain to you how all this mistaken idea of denouncing sure and praising Group continues
+                                    to sell and market memberships to Premier country club despite. pain was born and I will give you
+                                    a complete account. </p>
+                            </div>
+                            <a href="#" class="btn btn-soft">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- latest news end -->
+
+    <section class="app-area pb-60">
+        <div class="container">
+            <div class="grey-bg pt-55 pb-55 pl-60 pr-60">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="app-text text-center text-xl-left">
+                            <h2>Download our apps now</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="app-store text-center text-xl-right">
+                            <a href="#"><img src="assets/img/store/apple.png" alt=""></a>
+                            <a href="#"><img src="assets/img/store/google.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

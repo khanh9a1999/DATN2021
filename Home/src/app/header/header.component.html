@@ -1,0 +1,59 @@
+ <!-- header start -->
+ <header class="header">
+    <div class="header__middle pt-20" >
+        <div class="container">
+            <div class="row">
+                <div style="width: 100%;position:relative; ">
+                    <div class="header__add text-center text-md-right mb-20" >
+                        <a href="#">
+                            <img src="assets/images/bannerlogo111.jpg" alt="">
+                        </a>
+                        <!-- <a href="index.html" style="position: absolute; top: 20px; left: 20px;">
+                            <img src="assets/images/logo.png" alt="Header Logo">
+                        </a> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="header__menu-area grey-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="header__right-icon header__icon-black f-right mt-17">
+                        <a href="#" data-toggle="modal" data-target="#search-modal">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="header__menu header__menu-black f-left">
+                        <nav >
+                            <ul>
+                                <li><a routerLink = "/main">Trang chủ</a>
+                                </li>
+                                <ng-container *ngFor = "let gettheloai of theloai">
+                                
+                                <li><a [routerLink] = "['/main/type',gettheloai.idtheloai]">{{gettheloai.tentheloai}}</a></li>
+                            </ng-container> 
+                            <span class="nav-indicator"></span>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Search -->
+    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <form>
+                    <input formControlName="tieude" type="text"placeholder="Từ Khóa">
+                    <button (click)="search()" class="btn btn-sm btn-primary"><a routerLink = "/main/search">Tìm kiếm</a></button>
+                </form> -->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end -->
